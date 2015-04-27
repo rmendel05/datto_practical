@@ -1,0 +1,44 @@
+package com.datto.csv_db;
+
+import com.datto.personTool.BaseCsvParser;
+import com.datto.personTool.CsvReader;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class CsvReaderTest extends TestCase
+{
+    public CsvReaderTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( CsvReaderTest.class );
+    }
+
+    public void testCsvReader() throws Exception
+    {
+    	CsvReader reader = new CsvReader("testdata.csv");
+    	TestingParser parser = new TestingParser();
+    	reader.readAllLines(parser);
+    	
+        assertTrue("Not all lines processed",
+        		reader.getTotalLinesProcessed() == parser.processCount);
+        assertTrue("Not all lines successfully processed.", reader.getTotalLinesProcessedSuccessfully() == 
+        		reader.getTotalLinesProcessed());
+    }
+    
+    public class TestingParser extends BaseCsvParser {
+    	public int processCount = 0;
+
+		@Override
+		public void processValues(String[] values) throws Exception {
+			processCount++;
+		}
+    	
+    }
+}
+

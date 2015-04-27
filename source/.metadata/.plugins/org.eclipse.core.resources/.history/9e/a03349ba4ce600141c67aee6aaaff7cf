@@ -1,0 +1,133 @@
+package com.datto.personTool;
+
+import java.io.Console;
+import java.util.ArrayList;
+
+public final class PersonViewer 
+{
+	public String inputFile = null;
+	public PersonTable table = null;
+	
+	private boolean isDataLoaded = false;
+
+    public static void main(String[] args)
+    {
+		PersonViewer tool = new PersonViewer(args);
+		tool.execute();
+    }
+    
+    public PersonViewer(String[] args) {
+        System.out.println("Person Viewer");
+        if(parseArgs(args))
+        	loadFile();
+        else {
+        	displayHelp();
+        }
+    }
+    
+    private boolean parseArgs(String[] args) {
+    	if(args.length < 1) {
+    		System.out.println("Must specify an input CSV file.");
+    		return false;
+    	}
+    	
+    	String arg = args[0];
+    	if(arg == "-h" || arg == "--help")
+    		return false;
+    	else
+    		inputFile = arg;
+    	
+    	return true;
+    }
+    
+    private void displayHelp() {
+        System.out.println();
+        System.out.println( "Command Format: PersonViewer [CSV File]" );
+        System.out.println();
+        System.out.println( "Csv File Format: " + PersonCsvParser.CSV_FILE_FORMAT);
+        System.out.println();
+        System.out.println( "* The first line of the Csv file is expected to be a header and is ignored." );
+    }
+    
+    public void execute() {
+    	if(!this.isDataLoaded) {
+    		return;
+    	}
+    	
+    	// Menu loop
+    	boolean terminate = false;
+    	while(!terminate) {
+    		displayMenu();
+    		Console console = System.console();
+    		String option = console.readLine("Enter an option > ");
+    		if(option != null)
+    			option = option.trim();
+    		
+    		switch(option) {
+    		case "1":
+    			queryByLastName();
+    			break;
+    		case "2":
+    			queryAll();
+    			break;
+    		case "x":
+    			terminate = true;
+    			break;
+    		}
+    	}
+    }
+    
+    private void displayMenu() {
+        System.out.println("Please select from the following options:");
+        System.out.println("1 - Given a last name, return a list of all person ids with that last name" );
+        System.out.println("2 - Return a list of all people in the dataset, sorted by age. People with no age present in their table will sort to the end");
+        System.out.println("x - Exit" );
+    }
+    
+    private void loadFile() {
+    	CsvReader reader = new CsvReader(inputFile);
+    	PersonCsvParser parser = new PersonCsvParser();
+    	try {
+    		reader.readAllLines(parser);
+    		summarizeReadResult(reader);
+    		table = parser.table;
+    		this.isDataLoaded = true;
+    	} catch(Exception e) {
+    		System.out.println("Failed to load person table: " + e.getMessage());
+    	}
+    }
+    
+    private void summarizeReadResult(CsvReader reader) {
+    	ArrayList<String> errors = reader.getErrors();
+    	for(String error:errors) {
+    		System.out.println(error);
+    	}
+
+    	System.out.println("Successfully processed [" + 
+    			Integer.toString(reader.getTotalLinesProcessedSuccessfully()) + 
+    			"] of [" +
+    			Integer.toString(reader.getTotalLinesProcessed()) +
+    			"] total lines from the input file [" +
+    			inputFile + "]");
+    }
+    
+    private void queryByLastName() {
+		Console console = System.console();
+		String lastName = console.readLine("Please enter a last name > ");
+		System.out.println();
+		if(table.personsByLastName.containsKey(lastName)) {
+			System.out.println(PersonCsvParser.CSV_FILE_FORMAT);
+			PersonLink link = table.personsByLastName.get(lastName);
+			while(link != null) {
+				System.out.println(link.person.toString());
+				link = link.nextPersonLink;
+			}
+		} else {
+			System.out.println("There are no entries with last name [" + lastName + "].");
+		}
+    }
+    
+    private void queryAll() {
+    	
+    }
+}

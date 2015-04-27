@@ -1,0 +1,37 @@
+package com.datto.csv_db;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public final class CsvReader {
+	
+	public static void readAllLines(
+			String file, 
+			BaseCsvParser parser) throws Exception {
+		PersonTable toReturn = new PersonTable();
+		int lineNumber = 0;
+		
+		// Below "try with resources" statement requires Java 1.7
+		// The resources fileReader and reader will be automatically closed
+		// because they implement the "Closable" interface
+		try (FileReader fileReader = new FileReader(file);
+				BufferedReader reader = new BufferedReader(fileReader)) {
+			String line;
+
+			// Assume the first line is a header and skip it
+			line = reader.readLine();
+			if(line == null)
+				return;
+			
+			while((line = reader.readLine()) != null) {
+				lineNumber++;
+				String[] rawValues = parser.parseValues(line);
+				parser.processValues(rawValues);
+			}
+		} catch (FileNotFoundException e) {
+			throw new FileNotFoundException("ReadCsv() could not find the following input file: [" + file + "] Message: [" + e.getMessage() +"]");
+		}
+	}
+	
+}

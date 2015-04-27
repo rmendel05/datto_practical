@@ -1,0 +1,68 @@
+package com.datto.csv_db;
+
+import com.datto.personTool.Person;
+import com.datto.personTool.PersonTable;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class PersonTableTest extends TestCase
+{
+    public PersonTableTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( PersonTableTest.class );
+    }
+
+    public void testPersonTable()
+    {
+    	PersonTable table = new PersonTable();
+    	Person p1 = new Person();
+    	p1.id = "p1";
+    	p1.lastName = "Zanzibar";
+    	p1.age = 102;
+    	p1.firstName = "Charlie";
+    	p1.githubAccount = "samson";
+    	p1.thirdGradeGraduationDate = "1/1/1997";
+    	table.add(p1);
+
+    	Person p2 = new Person();
+    	p2.id = "p2";
+    	p2.lastName = "Muon";
+    	p2.age = 10;
+    	table.add(p2);
+
+    	Person p3 = new Person();
+    	p3.id = "p3";
+    	p3.lastName = "Alpha";
+    	p3.age = 35;
+    	table.add(p3);
+
+    	
+    	
+    	assertTrue("No entry was added to the table.",
+    			!table.personsById.isEmpty());
+    	assertTrue("Entry could not be found by id key",
+    			table.personsById.containsKey("id"));
+    	Person person = table.personsById.get("id");
+    	assertTrue("id does not match",
+    			person.id == "id");
+    	assertTrue("first name does not match",
+    			person.firstName == "first");
+    	assertTrue("last name does not match",
+    			person.lastName == "last");
+    	assertTrue("age does not match",
+    			person.age == 21);
+    	assertTrue("github account does not match",
+    			person.githubAccount == "xyz@loves-github.com");
+    	assertTrue("date of third grade graduation does not match",
+    			person.thirdGradeGraduationDate == "5/22/1999");
+    }
+}
+
+

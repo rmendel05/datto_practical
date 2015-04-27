@@ -1,0 +1,17 @@
+package com.datto.csv_db;
+
+public final class PersonCsvParser extends BaseCsvParser {
+	public PersonTable data = new PersonTable();
+	
+	public PersonCsvParser() {
+	}
+
+	@Override
+	public void processValues(String[] values) {
+		Person person = new Person();
+		int valueCount = values.length;
+		
+		data.add(person);
+	}
+
+}

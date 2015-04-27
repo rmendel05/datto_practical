@@ -1,0 +1,22 @@
+package com.datto.csv_db;
+
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public final class PersonTable {
+	public HashMap<String, Person> personById = new HashMap<String, Person>();
+	public HashMap<String, PersonLink> personByLastName = new HashMap<String, PersonLink>();
+	public SortedSet<Person> personsByAge = new TreeSet<>(
+			new Comparator<Person>() {
+				public int compare(Person first, Person second) {
+					if(first.age == second.age)
+						return 0;
+					else if(first.age < second.age)
+						return -1;
+					else
+						return 1;
+				}
+			});
+}

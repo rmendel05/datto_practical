@@ -1,0 +1,11 @@
+package com.datto.csv_db;
+
+import java.util.HashMap;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public final class PersonTable {
+	public HashMap<String, Person> personById = new HashMap<String, Person>();
+	public HashMap<String, PersonLink> personByLastName = new HashMap<String, PersonLink>();
+	public SortedSet<Person> personsByAge = new TreeSet<>();
+}

@@ -1,0 +1,51 @@
+package com.datto.csv_db;
+
+import java.io.BufferedReader;
+import java.io.Closeable;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public final class CsvReader {
+	
+	public static PersonTable readAllLines(String file) throws Exception {
+		PersonTable toReturn = new PersonTable();
+		
+		// Below "try with resources" statement requires Java 1.7
+		// The resources fileReader and reader will be automatically closed
+		// because they implement the "Closable" interface
+		try (FileReader fileReader = new FileReader(file);
+				BufferedReader reader = new BufferedReader(fileReader)) {
+			String line;
+
+			// Assume the first line is a header and skip it
+			line = reader.readLine();
+			
+			
+			boolean gotHeader = false;
+			int lineNumber = 0;
+			while((line = reader.readLine()) != null) {
+				if(gotHeader) {
+					String[] rawValues = parseDataLine(line);
+					LEDataRow row = toReturn.addRow();
+					if(rawValues.length != toReturn.getColumnCount()) {
+						throw new Exception("ReadCsv() found an inconsistent number of column values in row [" + lineNumber + "] compared to the header row.");
+					}
+					for(int index = 0; index < rawValues.length; index++) {
+						row.set(index, rawValues[index]);
+					}
+				}
+				lineNumber++;
+			}
+		} catch (FileNotFoundException e) {
+			throw new FileNotFoundException("ReadCsv() could not find the following input file: [" + file + "] Message: [" + e.getMessage() +"]");
+		}
+		
+		return toReturn;
+	}
+	
+	public static String[] parseDataLine(String line) {
+		// TODO Handle quoted separators
+		return line.split(",");
+	}
+}

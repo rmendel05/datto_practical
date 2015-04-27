@@ -1,0 +1,5 @@
+package com.datto.csv_db;
+
+public final class PersonTable {
+	public HashMap<String, Person> personById = new HashMap<String, Person>();
+}

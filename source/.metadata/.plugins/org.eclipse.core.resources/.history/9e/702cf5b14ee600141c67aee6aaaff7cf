@@ -1,0 +1,29 @@
+package com.datto.csv_db;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public final class PersonTableTest {
+
+}
+
+public class PersonTableTest extends TestCase
+{
+    public PersonTableTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( PersonTableTest.class );
+    }
+
+    public void testPersonTable()
+    {
+        assertTrue( true );
+    }
+}
+
+

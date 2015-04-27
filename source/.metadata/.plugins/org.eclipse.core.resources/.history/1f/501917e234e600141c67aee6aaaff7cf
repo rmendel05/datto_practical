@@ -1,0 +1,61 @@
+package com.datto.personTool;
+
+public final class PersonViewer 
+{
+	public String inputFile = null;
+	public PersonTable table = null;
+
+	private boolean helpRequested = false;
+
+    public static void main(String[] args)
+    {
+		PersonViewer tool = new PersonViewer(args);
+		tool.execute();
+    }
+    
+    public PersonViewer(String[] args) {
+        System.out.println("Person Viewer");
+        if(parseArgs(args))
+        	loadFile();
+        else {
+        	displayHelp();
+        }
+    }
+    
+    private boolean parseArgs(String[] args) {
+    	if(args.length < 1) {
+    		System.out.println("Must specify an input CSV file.");
+    		helpRequested = true;
+    		return false;
+    	}
+    	
+    	String arg = args[0];
+    	if(arg == "-h" || arg == "--help")
+    		helpRequested = true;
+    	else
+    		inputFile = arg;
+    	
+    	return true;
+    }
+    
+    private void displayHelp() {
+        System.out.println();
+        System.out.println( "Command Format: PersonViewer [CSV File]" );
+        System.out.println();
+        System.out.println( "Csv File Format: [id],[first_name],[last_name],[age,github_account],[date_of_third_grade_graduation]" );
+        System.out.println();
+        System.out.println( "* The first line of the Csv file is expected to be a header and is ignored." );
+    }
+    
+    public void execute() {
+        if(helpRequested)
+    		displayHelp();
+    	else {
+    		
+    	}
+    }
+    
+    private void loadFile() {
+    	
+    }
+}

@@ -1,0 +1,9 @@
+1429403665766	Rename type 'PersonCli'
+1429403865512	Rename package 'com.datto.csv_db'
+1429413244912	Rename field 'successfullyProcessedLines'
+1429413755249	Rename field 'data'
+1429418770690	Delete element
+1429420148836	Move 'testdata.csv' to 'java'
+1429423838372	Delete element
+1429427546497	Rename package 'com.datto.csv_db'
+1429429880980	Delete element

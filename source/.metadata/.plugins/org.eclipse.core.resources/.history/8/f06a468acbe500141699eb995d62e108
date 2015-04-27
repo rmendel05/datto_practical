@@ -1,0 +1,18 @@
+package com.datto.csv_db;
+
+public final class PersonCli 
+{
+	public String 
+	
+    public static void main( String[] args )
+    {
+        System.out.println( "Person Database" );
+
+		PersonCli tool = new PersonCli(args);
+		tool.execute();
+    }
+    
+    public PersonCli(String [] args) {
+    	
+    }
+}

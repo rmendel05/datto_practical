@@ -1,0 +1,44 @@
+package com.datto.csv_db;
+
+import java.io.File;
+
+public final class PersonCli 
+{
+	public String inputFile = null;
+	public PersonTable table = null;
+	
+    public static void main( String[] args )
+    {
+		PersonCli tool = new PersonCli(args);
+		tool.execute();
+    }
+    
+    public PersonCli(String [] args) {
+        System.out.println( "Person Database\n\n" );
+        if(parseArgs(args))
+        	execute();
+        else {
+        	displayHelp();
+        }
+    }
+    
+    public boolean parseArgs(String[] args) {
+    	if(args.length < 1) {
+    		System.out.println("Must specify an input CSV file.");
+    		return false;
+    	}
+    	
+    	inputFile = args[0];
+    	
+    	return true;
+    }
+    
+    public void displayHelp() {
+        System.out.println( "\n\nCommand Format: PersonCli [CSV File]" );
+    }
+    
+    
+    public void execute() {
+    	
+    }
+}

@@ -1,0 +1,24 @@
+package com.datto.csv_db;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class CsvReaderTest extends TestCase
+{
+    public CsvReaderTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( CsvReaderTest.class );
+    }
+
+    public void testCsvReader()
+    {
+        assertTrue( true );
+    }
+}
+

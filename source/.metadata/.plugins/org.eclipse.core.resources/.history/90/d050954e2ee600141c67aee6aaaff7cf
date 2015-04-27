@@ -1,0 +1,43 @@
+package com.datto.personTool;
+
+public final class PersonViewer 
+{
+	public String inputFile = null;
+	public PersonTable table = null;
+	
+    public static void main( String[] args )
+    {
+		PersonViewer tool = new PersonViewer(args);
+		tool.execute();
+    }
+    
+    public PersonViewer(String [] args) {
+        System.out.println( "Person Viewer\n\n" );
+        if(parseArgs(args))
+        	execute();
+        else {
+        	displayHelp();
+        }
+    }
+    
+    public boolean parseArgs(String[] args) {
+    	if(args.length < 1) {
+    		System.out.println("Must specify an input CSV file.");
+    		return false;
+    	}
+    	
+    	inputFile = args[0];
+    	
+    	return true;
+    }
+    
+    public void displayHelp() {
+        System.out.println( "\n\nCommand Format: PersonViewer [CSV File]" );
+        System.out.println( "\nCsv File Format: [id],[first_name],[last_name],[age,github_account],[date_of_third_grade_graduation]" );
+    }
+    
+    
+    public void execute() {
+    	
+    }
+}

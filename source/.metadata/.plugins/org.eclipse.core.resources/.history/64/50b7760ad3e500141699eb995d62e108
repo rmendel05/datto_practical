@@ -1,0 +1,6 @@
+package com.datto.csv_db;
+
+public final class PersonLink {
+	public Person person = null;
+	public Person nextPerson = null;
+}

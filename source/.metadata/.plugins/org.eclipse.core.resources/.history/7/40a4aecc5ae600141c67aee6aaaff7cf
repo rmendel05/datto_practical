@@ -1,0 +1,25 @@
+package com.datto.csv_db;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class PersonViewerTest extends TestCase
+{
+    public PersonViewerTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( PersonViewerTest.class );
+    }
+
+    public void testPersonViewer()
+    {
+        assertTrue( true );
+    }
+}
+
+
