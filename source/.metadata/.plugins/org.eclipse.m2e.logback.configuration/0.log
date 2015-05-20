@@ -1853,3 +1853,80 @@ org.eclipse.core.runtime.CoreException: Variable references non-existent resourc
 2015-04-19 04:55:20,994 [Worker-41] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B compile
 2015-04-19 04:55:26,486 [Worker-41] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/Datto_CSV_DB/personViewer
 2015-04-19 04:55:26,486 [Worker-41] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-04-19 12:20:40,165 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-19 12:20:40,169 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-04-19 12:20:40,175 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-19 12:20:40,175 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-04-27 09:06:38,319 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-27 09:06:38,427 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-04-27 09:06:38,431 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-27 09:06:38,431 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-04-27 09:06:46,252 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-27 09:06:46,253 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-04-27 09:06:46,254 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-27 09:06:46,255 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-04-27 11:26:11,329 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-27 11:26:11,333 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-04-27 11:26:11,335 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-27 11:26:11,335 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-04-30 20:30:08,465 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-30 20:30:08,512 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-04-30 20:30:08,513 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-30 20:30:08,514 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-05-03 19:28:25,394 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-03 19:28:25,562 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-05-03 19:28:25,564 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-03 19:28:25,564 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-05-19 21:34:09,052 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 21:34:09,095 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-05-19 21:34:09,098 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 21:34:09,098 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-05-19 21:59:10,053 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 21:59:10,055 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-05-19 21:59:10,057 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 21:59:10,057 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-05-19 22:04:04,493 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 22:04:04,493 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-05-19 22:04:04,494 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 22:04:04,494 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-05-19 22:04:35,009 [Worker-19] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for junit:junit:3.8.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact junit:junit:jar:sources:3.8.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:109) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:736) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:713) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:244) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:223) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:197) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:153) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:136) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:134) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.1.v20141014-1248.jar:na]
+2015-05-19 22:04:35,150 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 22:04:35,150 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-05-19 22:04:35,157 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 22:04:35,157 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-05-19 22:06:21,943 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 22:06:21,943 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-05-19 22:06:21,944 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 22:06:21,945 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-05-19 22:07:12,255 [Worker-14] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/Datto_CSV_DB/personViewer
+2015-05-19 22:07:12,256 [Worker-14] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B compile
+2015-05-19 22:07:19,069 [Worker-24] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/Datto_CSV_DB/personViewer
+2015-05-19 22:07:19,069 [Worker-24] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-05-19 22:11:39,575 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 22:11:39,576 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/main/resources
+2015-05-19 22:11:39,577 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-19 22:11:39,577 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/Datto_CSV_DB/personViewer/src/test/resources
+2015-05-19 22:14:49,922 [Worker-29] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/Datto_CSV_DB/personViewer
+2015-05-19 22:14:49,922 [Worker-29] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B compile
+2015-05-19 22:14:54,004 [Worker-31] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/Datto_CSV_DB/personViewer
+2015-05-19 22:14:54,004 [Worker-31] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package

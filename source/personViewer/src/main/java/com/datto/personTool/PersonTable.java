@@ -21,9 +21,13 @@ public final class PersonTable {
 			});
 	
 	public void add(Person person) {
-		addPersonById(person);
-		addPersonsByLastName(person);
-		personsByAge.add(person);
+		if(personsById.containsKey(person.id)) {
+			throw new IllegalStateException("Duplicate ID [" + person.id + "] found. Ignoring.");
+		} else {
+			addPersonById(person);
+			addPersonsByLastName(person);
+			personsByAge.add(person);
+		}
 	}
 	
 	public void addPersonById(Person person) {

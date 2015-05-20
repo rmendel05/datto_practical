@@ -50,6 +50,18 @@ public class PersonTableTest extends TestCase
     	p4.age = 34;
     	table.add(p4);
 
+    	Person p4Duplicate = new Person();
+    	p4Duplicate.id = "p4";
+    	p4Duplicate.lastName = "Zanzibar";
+    	p4Duplicate.age = 34;
+    	boolean isIllegalStateException = false;
+    	try {
+    		table.add(p4Duplicate);
+    	} catch (IllegalStateException e) {
+    		isIllegalStateException = true;
+    	}
+    	assertTrue(isIllegalStateException);
+
     	// Test ID lookup
     	assertTrue("p1 missing from id lookup",
     			table.personsById.containsKey("p1"));
